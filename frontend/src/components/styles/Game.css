@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+  }
+  
+  .app7 {
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    background-color: #eaeff1;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .bubble-game {
+    margin: 20px;
+  }
+  
+  .bubble-wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns of bubbles */
+    gap: 5px; /* Reduced space between bubbles */
+    margin-top: 20px;
+  }
+  
+  .bubble {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(173, 216, 230, 0.8); /* Light blue color */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bubble.active:hover {
+    background-color: rgba(135, 206, 250, 0.9); /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .bubble.popped {
+    background-color: #d3d3d3; /* Grey color when popped */
+    box-shadow: none; /* Remove shadow when popped */
+  }
+
+  
+  

@@ -1,0 +1,147 @@
+/* Container for all trackers to arrange them horizontally */
+.trackers {
+    display: flex;
+    justify-content: space-between; /* Space between trackers */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 40px; /* Increase the gap between the trackers */
+    margin-top: 20px;
+    padding: 0 100px; /* Add horizontal padding */
+  }
+  
+  /* Individual tracker styles */
+  .tracker {
+    width: 250px; /* Increase tracker width to prevent overlap */
+    background-color: #06a4a9;
+    padding: 30px; /* Increase padding for breathing room */
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  
+  .tracker h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  /* SVG and circular progress bar styles */
+  .tracker svg {
+    width: 160px;  /* Increased to prevent clipping */
+    height: 160px; /* Increased to prevent clipping */
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .tracker svg circle {
+    fill: none;
+    stroke-width: 15;
+    stroke-linecap: butt; /* Change to 'butt' to prevent rounded corners */
+  }
+  
+  .tracker svg circle.bg {
+    stroke: #e0f7fa;
+  }
+  
+  .tracker svg circle.fg {
+    stroke-dasharray: 440; /* Full circumference */
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s ease;
+  }
+  
+  /* Center the text inside the circular progress bar */
+  .tracker .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: white;
+  }
+  
+  /* Responsive Design: Avoid overlap on smaller screens */
+  @media screen and (max-width: 1024px) {
+    .trackers {
+      flex-direction: column; /* Stack trackers vertically on medium screens */
+      align-items: center;
+    }
+  
+    .tracker {
+      width: 200px; /* Reduce tracker width for medium screens */
+      padding: 20px;
+    }
+  }
+  
+  /* Custom colors for different trackers */
+  .steps-tracker svg circle.fg {
+    stroke: #00ff08; /* Green for steps */
+  }
+  
+  .heart-rate-tracker svg circle.fg {
+    stroke: #f44336; /* Red for heart rate */
+  }
+  
+  .distance-tracker svg circle.fg {
+    stroke: #ffeb3b; /* Yellow for distance */
+  }
+  
+  .calories-tracker svg circle.fg {
+    stroke: #ff5722; /* Orangish-red for calories */
+  }
+  
+  /* Button styles */
+  .buttons {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center; /* Center the button */
+  }
+  
+  .toggle-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #06a4a9;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #048b8c;
+  }
+  
+  /* Center and style the h1 tag */
+  h1 {
+    text-align: center; /* Center the text */
+    font-size: 36px; /* Increase font size */
+    margin-top: 20px; /* Add some margin on top */
+    margin-bottom: 30px; /* Add space below */
+    color: #333; /* Darker text color */
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  /* Custom class for the page title */
+  .page-title {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .logo-center {
+    position: absolute;
+    top: 48%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by half the width/height for perfect centering */
+    width: 40px; /* Adjust size as necessary */
+    height: 40px;
+    z-index: 1;  /* Ensure it's above the progress bar */
+  }
+  

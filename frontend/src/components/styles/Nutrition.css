@@ -1,0 +1,79 @@
+/* src/App.css */
+.App1 {
+  text-align: center;
+  background-color: #eaeff1;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #06a4a9;
+  margin-top: 20px;
+}
+
+.button-container1 {
+  display: flex; /* Use Flexbox to align buttons */
+  justify-content: center; /* Center buttons horizontally */
+  flex-wrap: wrap; /* Allow buttons to wrap if the screen is narrow */
+}
+
+button {
+  width: 200px; /* Set a constant width */
+  height: 60px; /* Set a constant height */
+  margin: 15px;
+  padding: 0; /* Remove padding to maintain consistent size */
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #06a4a9;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.response-content1 {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block; 
+  text-align: center;
+}
+
+/* strong {
+  color: #2c3e50;
+} */
+
+.ul1 {
+  list-style-type: none;
+  padding: 0;
+  text-align: center; /* Center align the list items */
+}
+
+.li1 {
+  margin: 10px 0;
+  padding: 8px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}

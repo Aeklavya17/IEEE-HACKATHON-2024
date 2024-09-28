@@ -1,0 +1,60 @@
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.dashboard,
+.mental-health-tracker,
+.social-wellbeing,
+.nutrition-section,
+.medical-integration {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.chart-section {
+  margin-top: 20px;
+}
+
+/* src/App.css */
+
+.app {
+  display: flex;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px); /* Ensure the content area adjusts according to sidebar width */
+  background-color: #f4f7f9;
+  min-height: 100vh;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
